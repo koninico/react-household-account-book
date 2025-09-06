@@ -1,0 +1,10 @@
+// Firestore セキュリティルール（Firebase Console で設定）
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // transactions コレクションは読み書き可能（実際の用途に応じて調整）
+    match /transactions/{document} {
+      allow read, write: if true; // 開発用（本番では認証を追加推奨）
+    }
+  }
+}
