@@ -183,7 +183,7 @@ function App() {
       {" "}
       {/* テーマの適用 */}
       <CssBaseline /> {/* MUIのCSSリセット */}
-      <Router>
+      <Router basename="/react-household-account-book">
         <Routes>
           {/* 親ルート: AppLayoutを使用 */}
           <Route path="/" element={<AppLayout />}>
